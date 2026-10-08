@@ -369,7 +369,7 @@
     <section class="section contact" id="contact">
       <div class="container contact-grid">
         <div class="contact-copy"><div class="eyebrow light">Start a conversation</div><h2>Let’s Build Something That Lasts</h2><p>I welcome thoughtful conversations about strategic consulting, business collaboration, AEC and project opportunities, speaking, and partnerships.</p><ul class="contact-types"><li>Strategic consulting</li><li>Business collaboration</li><li>AEC and project opportunities</li><li>Speaking and partnerships</li></ul><p style="margin-top:24px">Phnom Penh, Cambodia</p></div>
-        <form class="contact-form" name="public-contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+        <form class="contact-form" name="public-contact" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="public-contact">
           <p hidden><label>Leave this field empty: <input name="bot-field"></label></p>
           <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
@@ -379,6 +379,7 @@
           <div class="field full"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
           <button class="button button-outline" type="submit">Send an inquiry</button>
           <p class="form-note">This public inquiry form is for professional conversations. Please do not include confidential information.</p>
+          <p class="form-note" id="contact-form-error" role="alert" hidden>We could not send your inquiry. Please check your connection and try again.</p>
         </form>
       </div>
     </section>
@@ -406,6 +407,29 @@
       menu.classList.remove('open');
     }));
     document.querySelector('#year').textContent = new Date().getFullYear();
+    const contactForm = document.querySelector('.contact-form');
+    const contactFormError = document.querySelector('#contact-form-error');
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      contactFormError.hidden = true;
+      if (!contactForm.reportValidity()) return;
+
+      const submitButton = contactForm.querySelector('[type="submit"]');
+      submitButton.disabled = true;
+      try {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(contactForm)).toString()
+        });
+        if (!response.ok) throw new Error('Form submission failed');
+        window.location.href = '/thank-you.html';
+      } catch (error) {
+        contactFormError.hidden = false;
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
   </script>
 </body>
 </html>

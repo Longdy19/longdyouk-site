@@ -1,280 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Services | Longdy Ouk</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="icon" href="favicon.jpg">
-<style>
-
-/* GLOBAL */
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #0F172A;
-}
-
-h1,h2,h3 {
-  font-family: 'Playfair Display', serif;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-}
-
-/* NAV */
-/* HEADER */
-.navbar {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
-  z-index: 1000;
-  border-bottom: 1px solid #eee;
-}
-
-.nav-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 14px 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* LOGO FIX */
-.logo img {
-  height: 50px;
-  display: block;
-}
-
-/* NAV */
-.nav-links {
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #0F172A;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #C8A96A;
-}
-
-/* HERO */
-.hero {
-  padding: 100px 0;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 48px;
-}
-
-.hero p {
-  color: #6B7280;
-}
-
-/* SERVICES */
-.service {
-  padding: 80px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.service h2 {
-  font-size: 28px;
-}
-
-.service p {
-  color: #6B7280;
-  max-width: 600px;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-  padding: 100px 0;
-  background: #F8FAFC;
-}
-
-.btn {
-  border: 1px solid #C8A96A;
-  padding: 12px 24px;
-  text-decoration: none;
-  color: #C8A96A;
-}
-
-/* FOOTER */
-footer {
-  background: #0F172A;
-  color: white;
-  padding: 60px 0;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 30px;
-}
-
-.footer small {
-  color: #9CA3AF;
-}
-
-.footer {
-  background: #0F172A;
-  color: white;
-  padding: 60px 20px 20px;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: auto;
-
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 40px;
-}
-
-.footer-col h3,
-.footer-col h4 {
-  margin-bottom: 15px;
-}
-
-.footer-col p,
-.footer-col a {
-  color: #9CA3AF;
-  font-size: 14px;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.footer-bottom {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 13px;
-  color: #6B7280;
-}
-.footer-logo{
-height:50px;
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Longdinovat provides strategic planning, service design, execution, digital transformation, and SEF 4.0 learning for resilient AEC organizations.">
+  <title>Strategic Excellence Services | Longdy Ouk</title>
+  <link rel="icon" href="favicon.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#10182c; --gold:#c8a96a; --ink:#121a2e; --body:#536176; --line:#e5e8ee; --wash:#f7f8fa; --serif:"Playfair Display",Georgia,serif; --sans:"DM Sans",Arial,sans-serif; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:90px; }
+    body { margin:0; color:var(--ink); background:white; font-family:var(--sans); }
+    a { color:inherit; }
+    :focus-visible { outline:3px solid var(--gold); outline-offset:4px; }
+    .navbar { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.95); backdrop-filter:blur(16px); border-bottom:1px solid rgba(16,24,44,.08); }
+    .nav-inner { width:min(1160px,calc(100% - 56px)); min-height:80px; margin:auto; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .logo img { width:220px; display:block; }
+    .nav-links { display:flex; gap:clamp(14px,2.4vw,32px); }
+    .nav-links a { text-decoration:none; color:var(--ink); font-size:.9rem; font-weight:600; }
+    .nav-links a:hover { color:#967543; }
+    .container { width:min(1160px,calc(100% - 56px)); margin:auto; }
+    .eyebrow { color:#957744; font-size:.76rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+    h1,h2,h3 { font-family:var(--serif); font-weight:600; letter-spacing:-.025em; }
+    .hero { padding:100px 0 80px; background:linear-gradient(115deg,#fff 36%,#faf9f6); }
+    .hero h1 { max-width:850px; margin:14px 0 18px; font-size:clamp(3rem,7vw,5.8rem); line-height:1; }
+    .hero p { max-width:710px; color:var(--body); font-size:1.12rem; line-height:1.8; }
+    .badge { display:inline-block; margin-top:8px; padding:8px 13px; border-radius:999px; background:#f5efdf; color:#775b2d; font-size:.83rem; font-weight:700; }
+    .service-list { padding:30px 0 90px; }
+    .service-row { display:grid; grid-template-columns:90px minmax(220px,.75fr) 1.25fr; gap:24px; align-items:start; padding:32px 0; border-bottom:1px solid var(--line); }
+    .service-number { color:#a48248; font-weight:700; letter-spacing:.12em; }
+    .service-row h2 { margin:0; font-size:1.8rem; }
+    .service-row p { margin:0; max-width:650px; color:var(--body); line-height:1.8; }
+    .venture-context { margin-top:56px; padding:32px; border-radius:22px; background:var(--navy); color:white; }
+    .venture-context h2 { margin:10px 0; font-size:2.2rem; }
+    .venture-context p { max-width:800px; margin:0; color:#d0d7e2; line-height:1.8; }
+    .cta { padding:86px 20px; background:var(--wash); text-align:center; }
+    .cta h2 { margin:0 0 14px; font-size:clamp(2.2rem,5vw,3.8rem); }
+    .cta p { margin:0 auto 26px; max-width:650px; color:var(--body); line-height:1.8; }
+    .button { display:inline-flex; min-height:50px; align-items:center; justify-content:center; padding:12px 24px; border-radius:999px; background:var(--navy); color:white; font-weight:700; text-decoration:none; }
+    .button:hover { background:#263651; }
+    .footer { padding:56px 0 22px; background:#080e1d; color:white; }
+    .footer-grid { display:grid; grid-template-columns:1.5fr 1fr 1fr; gap:36px; }
+    .footer-logo { width:205px; margin-bottom:16px; }
+    .footer h3 { font-family:var(--sans); font-size:.9rem; letter-spacing:.08em; text-transform:uppercase; }
+    .footer p,.footer a { color:#aab5c5; font-size:.9rem; line-height:1.8; text-decoration:none; }
+    .footer a:hover { color:#e2c991; }
+    .footer-links { display:grid; gap:6px; }
+    .footer-bottom { margin-top:38px; padding-top:20px; border-top:1px solid rgba(255,255,255,.1); color:#8591a3; text-align:center; font-size:.84rem; }
+    @media(max-width:760px) {
+      .nav-inner { width:calc(100% - 36px); align-items:flex-start; flex-direction:column; padding:14px 0; }
+      .nav-links { flex-wrap:wrap; gap:8px 18px; }
+      .nav-links a { font-size:.82rem; }
+      .container { width:calc(100% - 36px); }
+      .hero { padding:70px 0 55px; }
+      .service-row { grid-template-columns:54px 1fr; gap:12px 16px; padding:25px 0; }
+      .service-row p { grid-column:2; }
+      .footer-grid { grid-template-columns:1fr 1fr; }
+      .footer-grid > div:first-child { grid-column:1 / -1; }
+    }
+    @media(max-width:450px) { .service-row { grid-template-columns:1fr; gap:9px; } .service-row p { grid-column:auto; } .footer-grid { grid-template-columns:1fr; } .footer-grid > div:first-child { grid-column:auto; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
 </head>
-
 <body>
-
-<!-- NAV -->
-<!-- HEADER -->
-<header class="navbar">
-  <div class="nav-inner">
-    
-    <div class="logo">
-      <img src="logo.jpg" alt="Longdy Ouk">
-    </div>
-
-    <nav class="nav-links">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="services.html">Services</a>
-      <a href="index.html#speaking">Speaking</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-
-  </div>
-</header>
-<!-- HERO -->
-<div class="hero container">
-  <h1>Strategic Solutions.<br>Measurable Results.</h1>
-  <p>I help organizations transform strategy into execution.</p>
-</div>
-
-<!-- SERVICE 1 -->
-<div class="service container">
-  <h2>Strategic Advisory</h2>
-  <p>
-    Align your business vision, leadership direction, and long-term strategy to achieve sustainable growth.
-  </p>
-</div>
-
-<!-- SERVICE 2 -->
-<div class="service container">
-  <h2>Project Management</h2>
-  <p>
-    Implement structured systems to deliver projects efficiently, ensuring quality, time, and cost control.
-  </p>
-</div>
-
-<!-- SERVICE 3 -->
-<div class="service container">
-  <h2>Service Design</h2>
-  <p>
-    Redesign how your organization delivers value through improved customer experience and service systems.
-  </p>
-</div>
-
-<!-- SERVICE 4 -->
-<div class="service container">
-  <h2>Business Transformation</h2>
-  <p>
-    Integrate strategy, people, and processes to transform your organization into a resilient and future-ready business.
-  </p>
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <h2>Work Directly With Me</h2>
-  <a href="mailto:youremail@gmail.com" class="btn">Contact Me</a>
-</div>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-inner">
-
-    <div class="footer-col">
-      <img src="logo.jpg" class="footer-logo">
-      <p>Strategic Excellence Architect</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <a href="index.html#home">Home</a>
-      <a href="index.html#about">About</a>
-      <a href="services.html">Services</a>
-      <a href="index.html#speaking">Speaking</a>
-      <a href="index.html#contact">Contact</a>
-    </div>
-
-    <div class="footer-col">
-      <h4>Services</h4>
-      <p>Strategic Advisory</p>
-      <p>Project Management</p>
-      <p>Service Design</p>
-      <p>Business Transformation</p>
-    </div>
-
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <p>Email: youremail@gmail.com</p>
-      <p>Phnom Penh, Cambodia</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Longdy Ouk. All rights reserved.
-  </div>
-</footer>
+  <header class="navbar"><div class="nav-inner">
+    <a class="logo" href="index.html#home" aria-label="Longdy Ouk home"><img src="logo-h.png" alt="Longdy Ouk, Strategic Excellence Architect"></a>
+    <nav class="nav-links" aria-label="Main navigation"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#ventures">Ventures</a><a href="index.html#framework">Framework</a><a href="#longdinovat-services" aria-current="page">Services</a><a href="index.html#speaking">Speaking</a><a href="index.html#contact">Contact</a></nav>
+  </div></header>
+  <main>
+    <section class="hero"><div class="container">
+      <div class="eyebrow">Longdy Ouk · Founder-led venture</div>
+      <h1>Strategic Excellence Services</h1>
+      <p>Through Longdinovat, I work with organizations to connect leadership direction, strategy, operations, and execution — building systems that create lasting value.</p>
+      <span class="badge">Delivered through Longdinovat</span>
+    </div></section>
+    <section class="service-list" id="longdinovat-services"><div class="container">
+      <article class="service-row"><span class="service-number">01</span><h2>Strategic Planning &amp; Advisory</h2><p>Craft future-ready strategies aligned with organizational purpose, competitive advantage, and sustainable growth.</p></article>
+      <article class="service-row"><span class="service-number">02</span><h2>Service Design &amp; Innovation</h2><p>Design customer-centered service journeys, processes, and experiences supported by digital capabilities.</p></article>
+      <article class="service-row"><span class="service-number">03</span><h2>Strategic Execution</h2><p>Translate strategy into action through project management, agile and lean methods, and performance-focused delivery.</p></article>
+      <article class="service-row"><span class="service-number">04</span><h2>Digital Transformation</h2><p>Connect digital workflows, dashboards, CRM systems, and operational tools with an organization's strategy and ways of working.</p></article>
+      <article class="service-row"><span class="service-number">05</span><h2>Capacity Building &amp; SEF 4.0 Academy</h2><p>Support leaders, managers, and teams with structured learning in strategy, service, execution, and innovation.</p></article>
+      <article class="service-row"><span class="service-number">06</span><h2>Resilient AEC Business Systems</h2><p>Bring strategy, services, execution, and digital capability together to help AEC organizations scale and adapt.</p></article>
+      <aside class="venture-context"><div class="eyebrow" style="color:#e0c991">A connected ecosystem</div><h2>Strategy connected to delivery.</h2><p>Longdinovat focuses on strategic planning, service design, execution, and digital transformation for AEC businesses. Its SEF 4.0 framework connects Strategy, Service, Execution, and Digital. Anijak focuses on feasibility, architecture and design, business development, and project management.</p><p style="margin-top:20px"><a href="https://longdinovat.com" target="_blank" rel="noopener noreferrer">Visit Longdinovat ↗</a> &nbsp;·&nbsp; <a href="https://anijak-1.netlify.app" target="_blank" rel="noopener noreferrer">Visit Anijak ↗</a></p></aside>
+    </div></section>
+    <section class="cta"><h2>Let’s Build Something That Lasts</h2><p>For a conversation about advisory work, collaboration, AEC or project opportunities, speaking, or partnerships, get in touch.</p><a class="button" href="index.html#contact">Start a conversation</a></section>
+  </main>
+  <footer class="footer"><div class="container footer-grid">
+    <div><a href="index.html#home"><img src="logo-f.png" class="footer-logo" alt="Longdy Ouk"></a><p>Strategic Excellence Architect<br>Founder of Longdinovat &amp; Anijak<br>Phnom Penh, Cambodia</p></div>
+    <div><h3>Navigation</h3><div class="footer-links"><a href="index.html#home">Home</a><a href="index.html#about">About</a><a href="index.html#ventures">Ventures</a><a href="index.html#framework">Framework</a><a href="index.html#services">Services</a><a href="index.html#speaking">Speaking</a><a href="index.html#contact">Contact</a></div></div>
+    <div><h3>Ventures</h3><div class="footer-links"><a href="https://longdinovat.com" target="_blank" rel="noopener noreferrer">Longdinovat</a><a href="https://anijak-1.netlify.app" target="_blank" rel="noopener noreferrer">Anijak</a></div></div>
+  </div><div class="container footer-bottom">© <span id="year">2026</span> Longdy Ouk — Strategic Excellence Architect</div></footer>
+  <script>document.querySelector('#year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
